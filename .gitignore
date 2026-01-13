@@ -8,7 +8,7 @@ venv/
 
 # Environment variables
 .env
-
+config.py
 # Logs & checkpoints
 logs/
 checkpoints/*.txt

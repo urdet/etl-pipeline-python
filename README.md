@@ -16,15 +16,16 @@ This project is suitable for:
 
 etl-pipeline-python/
 │
-├── main.py # ETL orchestration
-├── extract.py # Data extraction logic
-├── transform.py # Data cleaning and transformation
-├── load.py # Load transformed data
-├── checkpoint.py # Incremental load management
-├── checkpoints/ # Stores last execution metadata
-├── requirements.txt # Python dependencies
-├── .gitignore # Ignored files and secrets
+├── main.py              # ETL orchestration
+├── extract.py           # Data extraction logic
+├── transform.py         # Data cleaning and transformation
+├── load.py              # Load transformed data
+├── checkpoint.py        # Incremental load management
+├── checkpoints/         # Stores last execution metadata
+├── requirements.txt     # Python dependencies
+├── .gitignore           # Ignored files and secrets
 └── README.md
+
 
 ---
 
@@ -60,61 +61,65 @@ etl-pipeline-python/
 - Git & GitHub
 
 ---
-
 ## Setup Instructions
 
 ### Clone the repository
 
-```bash
-git clone https://github.com/urdet/etl-pipeline-python.git
-cd etl-pipeline-python
+``git clone https://github.com/urdet/etl-pipeline-python.git
+cd etl-pipeline-python``
 
-# Create a virtual environment
-python -m venv .venv
-.venv\Scripts\activate
+### Create a virtual environment
 
-Install dependencies
+``python -m venv .venv
+.venv\Scripts\activate``
+
+### Install dependencies
+
 pip install -r requirements.txt
 
-Configuration
+---
+
+## Configuration
 
 Create a local config.py file (ignored by Git):
 
-MYSQL_URI = "mysql+pymysql://user:password@localhost:3306/database"
+``MYSQL_URI = "mysql+pymysql://user:password@localhost:3306/database"``
 
-Run the ETL Pipeline
-python main.py
+---
 
+## Run the ETL Pipeline
 
+``python main.py``
 First run loads all data
-
 Next runs load only new or updated records
 
-Sample Source Table
-CREATE TABLE orders (
+---
+
+## Sample Source Table
+
+``CREATE TABLE orders (
     order_id INT,
     customer_id INT,
     quantity INT,
     unit_price DECIMAL(10,2),
     status VARCHAR(50),
     updated_at DATETIME
-);
+);``
 
-Future Improvements
+---
 
-Add logging
+## Future Improvements
 
-Add unit tests
+- Add logging
+- Add unit tests
+- Dockerize the pipeline
+- Integrate with Airflow
+- Add data quality checks
+- Support cloud databases
 
-Dockerize the pipeline
+---
 
-Integrate with Airflow
-
-Add data quality checks
-
-Support cloud databases
-
-Author
+## Author
 
 Rida Elantari
 Data Engineering & AI Student – EST Béni Mellal

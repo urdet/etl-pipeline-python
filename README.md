@@ -14,6 +14,9 @@ This project is suitable for:
 
 ## Project Structure
 
+## Project Structure
+
+```text
 etl-pipeline-python/
 │
 ├── main.py              # ETL orchestration
@@ -25,7 +28,7 @@ etl-pipeline-python/
 ├── requirements.txt     # Python dependencies
 ├── .gitignore           # Ignored files and secrets
 └── README.md
-
+``` 
 
 ---
 
@@ -65,18 +68,21 @@ etl-pipeline-python/
 
 ### Clone the repository
 
-``git clone https://github.com/urdet/etl-pipeline-python.git
-cd etl-pipeline-python``
+```bash
+git clone https://github.com/urdet/etl-pipeline-python.git
+cd etl-pipeline-python
+```
 
 ### Create a virtual environment
-
-``python -m venv .venv
-.venv\Scripts\activate``
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+```
 
 ### Install dependencies
-
+```bash
 pip install -r requirements.txt
-
+```
 ---
 
 ## Configuration
@@ -89,7 +95,9 @@ Create a local config.py file (ignored by Git):
 
 ## Run the ETL Pipeline
 
-``python main.py``
+```bash
+python main.py
+```
 First run loads all data
 Next runs load only new or updated records
 
@@ -97,14 +105,16 @@ Next runs load only new or updated records
 
 ## Sample Source Table
 
-``CREATE TABLE orders (
+```code
+CREATE TABLE orders (
     order_id INT,
     customer_id INT,
     quantity INT,
     unit_price DECIMAL(10,2),
     status VARCHAR(50),
     updated_at DATETIME
-);``
+);
+```
 
 ---
 

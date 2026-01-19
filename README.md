@@ -14,8 +14,6 @@ This project is suitable for:
 
 ## Project Structure
 
-## Project Structure
-
 ```text
 etl-pipeline-python/
 │
